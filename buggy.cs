@@ -25,7 +25,7 @@ class Program
 
     static void CalculateTotal(int value)
     {
-        for (int i = 0; i <= value; i++)
+        for (int i = 0; i < value; i++)  // Fixed: <= changed to < (off-by-one)
         {
             total += i;
         }
