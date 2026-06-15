@@ -27,7 +27,7 @@ class Program
         }
 
         // Bug 5: Incorrect comparison
-        string password = "admin";
+        string password = Environment.GetEnvironmentVariable("DB_PASSWORD"); // Fixed: use env var
         if (password == "Admin")
         {
             Console.WriteLine("Access Granted");
