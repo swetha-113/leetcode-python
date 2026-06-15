@@ -7,7 +7,8 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Enter a number:");
-        int n = Convert.ToInt32(Console.ReadLine());
+        if (!int.TryParse(Console.ReadLine(), out int n))
+        { Console.WriteLine("Invalid input."); return; }
 
         int result = DivideByNumber(100, n);
 
