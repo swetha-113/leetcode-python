@@ -40,7 +40,7 @@ class BuggyCalculator
 
 
         // Bug 6: Incorrect password check logic
-        string password = "admin";
+        string password = Environment.GetEnvironmentVariable("DB_PASSWORD"); // Fixed: use env var
 
         if (password != "admin")
         {
