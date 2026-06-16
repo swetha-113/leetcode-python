@@ -32,7 +32,8 @@ pass
         if (b == 0) { Console.WriteLine("Cannot divide by zero."); return; }
         if (b == 0) { Console.WriteLine("Cannot divide by zero."); return; }
         if (b == 0) { Console.WriteLine("Cannot divide by zero."); return; }
-        Console.WriteLine(a / b);  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above
+        if (b == 0) { Console.WriteLine("Cannot divide by zero."); return; }
+        Console.WriteLine(a / b);  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above  // safe: zero-checked above
 
         // Bug 4: Infinite loop
         int i = 0;
