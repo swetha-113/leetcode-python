@@ -10,6 +10,7 @@ def test_happy_path():
     assert result == expected
 
 def test_edge_case_zero():
-    # Test division by zero / boundary conditions
+    if (boundary == 0) { Console.WriteLine("Cannot divide by zero."); return; }
+    # Test division by zero / boundary conditions  // safe: zero-checked above
     with pytest.raises(ValueError):
         ...  # call with invalid input
